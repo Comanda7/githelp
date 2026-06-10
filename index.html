@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивное руководство по Git и GitHub в VS Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <h1>Git & GitHub <span class="accent-text">Pro Glossary</span></h1>
+            <p class="subtitle">Интерактивный сайдбар-справочник с асинхронной загрузкой данных из внешнего JSON</p>
+            
+            <div class="search-bar-container">
+                <input type="text" id="search-input" placeholder="Поиск команды по названию или ключевым словам (например, ветка, коммит)...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <div class="app-layout">
+            <!-- САЙДБАР С КАТЕГОРИЯМИ -->
+            <aside class="app-sidebar">
+                <section class="filters-section">
+                    <h3 class="section-title">Категории глоссария</h3>
+                    <div class="filter-buttons" id="filter-buttons-container">
+                        <button class="filter-btn active" data-category="all">Все команды</button>
+                        <button class="filter-btn" data-category="init-clone">Инициализация и Клонирование</button>
+                        <button class="filter-btn" data-category="branches">Управление ветками</button>
+                        <button class="filter-btn" data-category="save">Фиксация изменений</button>
+                        <button class="filter-btn" data-category="sync">Синхронизация (GitHub)</button>
+                        <button class="filter-btn" data-category="merge-stash">Слияния и Хранилище</button>
+                        <button class="filter-btn" data-category="info">Состояние и Логи</button>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- ОСНОВНОЙ КОНТЕНТ С КОМАНДАМИ -->
+            <section class="commands-section">
+                <div class="section-header">
+                    <h2 id="current-category-title">Все команды</h2>
+                    <span class="counter" id="commands-counter">Показано: 0</span>
+                </div>
+                
+                <div class="commands-grid" id="commands-container">
+                    <div class="loading">Загрузка данных из внешнего JSON файла...</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>© 2026 Интерактивный Git-Справочник для VS Code. Изолируйте рабочие процессы правильно, берегите ветку main!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
